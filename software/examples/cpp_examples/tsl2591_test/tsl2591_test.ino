@@ -1,8 +1,22 @@
+/** @file tsl2591_test.ino 
+*
+* @brief Code for testing all the available measurements for the TSL2591 UNIT Module Light Sensor
+*
+* @author Jonathan Mejorado Lopez
+*
+* @bug No known bugs.
+*/
 
 #include <Adafruit_TSL2591.h>
 #include <Wire.h>
+
+//Pin definitions for I2C Settings
 #define SDA_PIN 6
 #define SCL_PIN 7
+
+/******************************************************************************
+* Arrays for config and testings
+*****************************************************************************/
 
 //Creacion de objeto de clase Adafruit_TSL2591 que hace referencia al sensor 
 tsl2591Gain_t ganancias[] = {
@@ -37,10 +51,13 @@ const char* etiquetasTiming[] = {
     "600"
 };
 
-
+//Object construct for TSL2591
 Adafruit_TSL2591 tsl = Adafruit_TSL2591(1);
 
-
+/**
+* @brief Initialization of the device find the connection in the bus
+*
+*/
 void initDevice(){
   Serial.println("╔══════════════════════════════════════╗");
   Serial.println("║  Iniciando ID del TSL2591            ║");
@@ -56,6 +73,10 @@ void initDevice(){
 
 }
 
+/**
+* @brief Function for scan all the devices conected to the I2C bus
+*
+*/
 void scanIICDevices(){
   Serial.println("Escaneando bus I2C...");
   for (uint8_t addr = 1; addr < 127; addr++) {
@@ -66,7 +87,12 @@ void scanIICDevices(){
     }
   }
 }
-void sweepMeditions(){
+
+/**
+* @brief Variation of all settings: integration time and gain for the sensor for testings
+*
+*/
+void sweepMeasurements(){
   
   for(int i = 0; i < 4; i++){
       tsl.setGain(ganancias[i]);
@@ -83,6 +109,10 @@ void sweepMeditions(){
 
 }
 
+/**
+* @brief Read Complete of the three variables availables for sensing with the IC
+*
+*/
 void advancedRead(void)
 {
   // More advanced data read example. Read 32 bits with top 16 bits IR, bottom 16 bits full spectrum
@@ -98,7 +128,10 @@ void advancedRead(void)
   Serial.print(F("Lux: ")); Serial.println(tsl.calculateLux(full, ir), 6);
 }
 
-
+/**
+* @brief Print in terminal serial all of measurments formatted to csv data
+*
+*/
 void printResults(){
   uint32_t lum = tsl.getFullLuminosity();
   uint16_t ir,full;
@@ -136,7 +169,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  sweepMeditions();
+  sweepMeasurements();
 
  
   //advancedRead();

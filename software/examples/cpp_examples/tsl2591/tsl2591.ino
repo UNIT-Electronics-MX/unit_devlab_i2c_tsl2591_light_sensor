@@ -78,7 +78,7 @@ void setup() {
   Wire.begin(SDA_PIN,SCL_PIN);
   Wire.setClock(400000);
   initDevice();
-    tsl.setGain(TSL2591_GAIN_MED);
+  tsl.setGain(TSL2591_GAIN_MED);
   tsl.setTiming(TSL2591_INTEGRATIONTIME_100MS);
   tsl.registerInterrupt(500,3300,TSL2591_PERSIST_10);
 
