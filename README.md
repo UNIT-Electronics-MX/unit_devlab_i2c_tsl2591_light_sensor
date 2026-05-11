@@ -1,23 +1,12 @@
 
-# DevLab: [Protocol/Interface] [Chip/Model] [Brief Description][Module/Sensor/Shield/Adapter]
-<!-- Exception:
-
-The PULSAR development board line does not use the DevLab: prefix.
-
-Format: PULSAR [MCU/Model]
-
-Examples: PULSAR C6, PULSAR H2, PULSAR RP2350
-
-The JUN R3 board also does not use DevLab:
-
-Example: JUN R3 -->
+# DevLab: I2C TSL2591 Light Sensor Module
 
 ## Introduction
 
-This is a modular development board based on a popular microcontroller, designed for rapid prototyping and educational use. It features flexible power options, modern connectivity, and user-friendly interfaces. An integrated LED matrix allows for simple visual feedback and display.
+The DevLab: I2C TSL2591 Light Sensor Module is a compact and versatile development board designed for prototyping and learning about light sensing applications. It features the TSL2591 digital light sensor, which provides accurate measurements of ambient light levels. This module is ideal for students, hobbyists, and developers looking to explore light sensing technology and integrate it into their projects. With its easy-to-use I2C interface, the DevLab: I2C TSL2591 Light Sensor Module can be easily connected to microcontrollers and development boards for a wide range of applications, including environmental monitoring, smart lighting systems, and more.
 
 <div align="center">
-  <img src="hardware/resources/unit_top_v_1_0_0_icp10111_barometric_pressure_sensor.png" width="450px" alt="Development Board">
+  <img src="hardware/resources/unit_top_v_1_0_0_i2c_tsl2591_light_sensor.png" width="450px" alt="Development Board">
   <p><em>Development Board</em></p>
 </div>
 
@@ -38,34 +27,14 @@ This is a modular development board based on a popular microcontroller, designed
 
 | Feature           | Description                                         |
 |-------------------|-----------------------------------------------------|
-| Microcontroller   | 8-bit MCU                                           |
-| Memory            | Flash, SRAM, EEPROM                                 |
-| Clock Speed       | 16 MHz                                              |
-| Power Supply      | USB-C (5V)                                          |
-| Interfaces        | UART, I2C, SPI, PWM, ADC, GPIO                      |
-| LED Matrix        | 5x5 RGB LED Matrix                                  |
-| Connectivity      | USB-C for programming and power                     |
-| Form Factor       | UNO-compatible                                      |
-| Development IDEs  | Arduino IDE, PlatformIO                             |
-| Onboard Features  | Integrated LED matrix, programmable LED, reset button|
-| Expansion Port    | I2C connector for sensors and modules               |
 
 </div>
 
 ## Applications
 
-- **Prototyping:** Quickly develop and test ideas.
-- **Education:** Suitable for learning microcontroller basics.
-- **Wearables:** Compact and versatile for wearable devices.
-- **Displays:** Use the LED matrix for simple visual output.
 
-## Resources
 
-- [Schematic Diagram](#)
-- [Pinout Diagram](#)
-- [Getting Started Guide](#)
-
-## 📝 License
+##  License
 
 All hardware and documentation in this project are licensed under the **MIT License**.  
 See [`LICENSE.md`](LICENSE.md) for details.
