@@ -3,7 +3,7 @@
 *ISSUE INTERRUPT
 ****************************************************
 */
-#include <Adafruit_TSL2591.h>
+#include <Devlab_TSL2591.h>
 #include <Wire.h>
 #define SDA_PIN 6
 #define SCL_PIN 7

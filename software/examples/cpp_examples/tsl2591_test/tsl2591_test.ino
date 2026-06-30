@@ -7,7 +7,7 @@
 * @bug No known bugs.
 */
 
-#include <Adafruit_TSL2591.h>
+#include <Devlab_TSL2591.h>
 #include <Wire.h>
 
 //Pin definitions for I2C Settings
